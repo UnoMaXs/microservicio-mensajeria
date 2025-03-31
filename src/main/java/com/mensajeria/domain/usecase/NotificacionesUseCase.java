@@ -15,6 +15,7 @@ public class NotificacionesUseCase implements INotificacionesServicePort {
 
     @Override
     public void sendNotification(Notificaciones notificaciones) {
+
         notificacionesPersistencePort.sendNotification(notificaciones);
     }
 }
