@@ -29,7 +29,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(auth ->
                         auth
 
-                                .requestMatchers(HttpMethod.POST, "/api/notificaciones/enviar").hasRole("EMPLEADO")
+                                .requestMatchers(HttpMethod.POST, "/notificaciones/pedido-listo").hasAnyRole("EMPLEADO")
 
                                 .anyRequest().authenticated()
                 )
